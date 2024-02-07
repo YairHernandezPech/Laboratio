@@ -1,0 +1,56 @@
+/* Estilos para el cuadro y el tooltip */
+.cuadro {
+    position: relative;
+    width: 110px;
+    height: 100px;
+    background-color: green;
+    margin: 5px;
+    margin-left: 33px;
+    display: inline-block;
+    border-radius: 3px;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    vertical-align: middle;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: #c7c7c7;
+    color: rgb(42, 40, 40);
+    padding: 12px;
+    border-radius: 5px;
+    width: 200px;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    font-size: 14px;
+    white-space: break-word;
+    line-height: 1.4;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0.95;
+}
+
+.tooltip::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #c7c7c7 transparent transparent transparent;
+    transform: translateX(-50%);
+}
+
+.tooltip-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.cuadro:hover .tooltip {
+    display: block;
+}
